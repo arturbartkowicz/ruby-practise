@@ -23,4 +23,40 @@ puts "Welcome to the widget store!"
 answer = ask ('How many widgets are you ordering?')
 number = answer.to_i
 total = price(number)
-print "For #{number} widgets, your total is: $#{total} "
+puts "For #{number} widgets, your total is: $#{total} "
+
+puts "*******************"
+
+#  Github exercise 1 
+# Hello, World!
+# Create a program which prints “Hello, World!” to the screen
+# Update your program so that it asks the user for their name and greets them
+# Update your program so that it will only greet it’s creators!
+# Make the output look “nicer” - for example, put the text in a frame, one word per line:
+# ******
+# *Like*
+# *This*
+# ******
+# Add the current date and time to the output
+
+puts "Hello, World"
+puts "Put your name:"
+name = gets.chomp
+character = name.count name
+puts "*******#{character}"
+puts "*Hello #{name}*".center(1,">")
+puts "*************"
+puts Time.now
+
+puts "*******************"
+
+# Ruby loops
+
+loop do
+  print "Do you want to continue?"
+  answer = gets.chomp.downcase
+  if answer == "n"
+    break
+  end
+end
+
