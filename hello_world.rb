@@ -228,3 +228,60 @@ end
 5.times do |item|      #If we want to send an argument to the block we do so by writing a pipe and
   puts "Hello! #{item}"  #puting the local variable inside of the pipes
 end
+
+puts "*******************"
+
+# For Loops. A ruby loop is more an iterator and functions internally very much like the each method
+
+for item in 1..10 do                      # 1..10 -> a range - is created by using two different objects
+    puts "The current item is #{item} "   # in this case numbers and two dots
+end 
+
+# With array:
+
+for item in ["Programming","is","fun"]
+  puts "The current item is #{item}"
+end
+
+puts "*******************"
+
+# Simple Contact Program not finish!
+
+contact_list = []
+
+def ask (question, kind="string")
+  print question + " "
+  answer = gets.chomp
+  answer = answer.to_i if kind == "number"
+  return answer
+end
+
+def add_contact
+  contact = {"name" => "", "phone_numbers" =>[]}
+  contact["name"] = ask("what is the person's name?")
+  answer = ""
+  while answer != "n"
+    answer = ask("Do you want to add a phone number? (y/n)")
+    if answer == "y"
+      phone = ask("Enter phone number:")
+      contact["phone number"].push(phone)
+    end
+  end
+  return contact
+end
+
+contact_list = []
+
+answer = ""
+
+while answer != "n"
+  contact_list.push(add_contact)
+  answer = ask("Add another? (y/n)")
+end
+
+puts "---"
+
+
+
+
+
